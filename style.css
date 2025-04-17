@@ -83,8 +83,11 @@ body{
     margin-bottom: 2rem;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     gap: 10px;
     justify-content: space-evenly;
+    height: fit-content;
+    white-space: normal;
 }
 
 h4{
@@ -99,4 +102,21 @@ h4{
     border-radius: 10px;
     font-size: 1rem;
     min-height: 4rem;
+    overflow: visible;
+    word-wrap: break-word;
+}
+
+@media(max-width:600px){
+    .stats-cards{
+        width: 80%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    .box{
+        flex:0 0 auto;
+    }
+    .card{
+        width: 100%;
+    }
 }
